@@ -1,8 +1,9 @@
 package main
 
 import (
-	"log"
+	"fmt"
 	"math/rand"
+	"strings"
 	"time"
 )
 
@@ -14,9 +15,11 @@ func main() {
 	cardSet := initSet()
 	var randomCard string
 	var randIndex int
+	var output strings.Builder
 	for i := 0; i < workoutLength; i++ {
 		randIndex = rand.Intn(len(cardSet.Cards))
 		randomCard = cardSet.Cards[randIndex]
-		log.Printf("%d. %s", i+1, cardSet.getCardTranslation(randomCard))
+		output.WriteString(fmt.Sprintf("%d. %s \n", i+1, cardSet.getCardTranslation(randomCard)))
 	}
+	fmt.Println(output.String())
 }
