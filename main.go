@@ -12,7 +12,7 @@ const workoutLength = 20
 func main() {
 	rand.Seed(time.Now().Unix())
 
-	cardSet := initSet()
+	cardSet := cardset.InitSet()
 	var randomCard string
 	var randIndex int
 	var output strings.Builder

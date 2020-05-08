@@ -1,4 +1,4 @@
-package main
+package cardset
 
 import (
 	"fmt"
@@ -77,7 +77,8 @@ func (c *CardSet) getCardTranslation(card string) string {
 	return translation.String()
 }
 
-func initSet() *CardSet {
+// InitSet inits the card set
+func InitSet() *CardSet {
 	workoutMap = map[string][]string{
 		"S": []string{
 			"push up",
@@ -95,7 +96,7 @@ func initSet() *CardSet {
 			"walking lunges",
 			"bulgarian split squat",
 			"single leg hip thrust",
-			"nordic ham curl",
+			"banded romanian dead lift",
 		},
 		"D": []string{
 			"banded curl",
