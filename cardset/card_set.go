@@ -28,7 +28,8 @@ func (c *CardSet) removeCard(card string) []string {
 	return c.Cards
 }
 
-func (c *CardSet) getCardTranslation(card string) string {
+// GetCardTranslation translates the card to some movement and reps or rest
+func (c *CardSet) GetCardTranslation(card string) string {
 	cardStrs := strings.Split(card, colonDelim)
 	if len(cardStrs) != 2 {
 		return ""
