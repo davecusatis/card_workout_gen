@@ -5,6 +5,8 @@ import (
 	"math/rand"
 	"strings"
 	"time"
+
+	"github.com/davecusatis/card_workout_gen/cardset"
 )
 
 const workoutLength = 20
